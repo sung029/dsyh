@@ -3,8 +3,19 @@
   <head lang="ko">
     <meta charset="utf-8">
     <title>HTML5 Template</title>
+
+	<script>
+		var feed = new Instafeed({
+			get: 'user',
+			resolution: 'low_resolution',
+			userId: '1587529762',
+			limit: '10',
+			accessToken: 'a65f075.387d0cf3448b4f1b90a2bf06effe3a5b',
+			template: '<a href="{{link}}" target="_blank"><img src="{{image}}" /></a>
+		});
+		feed.rum();
+	</script>
   </head>
   <body>
-  	<img src="images/test.jpg">
   </body>
 </html>
