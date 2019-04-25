@@ -5,20 +5,22 @@
     <title>HTML5 Template</title>
 	<script type="text/javascript" src="js/instafeed.min.js"></script>
 	<script>
-		var feed = new Instafeed({
-			get: 'user',
-			resolution: 'low_resolution',
-			userId: '1587529762',
-			limit: '10',
-			accessToken: 'a65f075.387d0cf3448b4f1b90a2bf06effe3a5b',
-			template: '<a href="{{link}}" target="_blank"><img src="{{image}}" /></a>
-		});
-		feed.rum();
+		var token = '1587529762.a65f075.387d0cf3448b4f1b90a2bf06effe3a5b',
+			num_photos = 10,
+			container = document.getElementById( 'rudr_instafeed' ),
+			scrElement = document.createElement( 'script' );
+		 
+		window.mishaProcessResult = function( data ) {
+			for( x in data.data ){
+				container.innerHTML += '<li><img src="' + data.data[x].images.low_resolution.url + '"></li>';
+			}
+		}
+		 
+		scrElement.setAttribute( 'src', 'https://api.instagram.com/v1/users/self/media/recent?access_token=' + token + '&count=' + num_photos + '&callback=mishaProcessResult' );
+		document.body.appendChild( scrElement );
 	</script>
   </head>
   <body>
-  	<div id="instagram" align="center">
-		<div id="instafeed"></div>
-	</div>
+  	<ul id="rudr_instafeed"></ul>
   </body>
 </html>
