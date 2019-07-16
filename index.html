@@ -410,8 +410,6 @@
         <section id="content">
         
         	<!-- CONTAINER -->
-			<div class="container"> 
-    			
                 <!-- ROW-3 -->
                 <div class="row">
                 
@@ -458,14 +456,31 @@
                         </div>
 
                     </div>
-                    <a href="https://map.kakao.com/link/to/카카오판교오피스,37.402056,127.108212">test</a>
 				</div><!--END of ROW-2-->
              <!--c898ee071d3ce331d1967ce5dfada510-->
 			</div> <!-- END of CONTAINER -->
                         
         </section> <!--END of CONTENT SECTION-->   
         
-        
+        <div class="container"> 
+			<a id="navi" href="#" onclick="navi();">
+			<img src="/images/navi.png"/>
+			</a>
+			<script type='text/javascript'>
+			  //<![CDATA[
+				// 사용할 앱의 JavaScript 키를 설정해 주세요.
+				Kakao.init('c898ee071d3ce331d1967ce5dfada510');
+				// 카카오 로그인 버튼을 생성합니다.
+				function navi(){
+					Kakao.Navi.start({
+						name: "아르떼 채플&컨벤션",
+						x: 127.11205203011632,
+						y: 37.39279717586919,
+						coordType: 'wgs84'
+					});
+				}
+			  //]]>
+			</script>
         
 		<div id="map" style="width:100%;height:350px;"></div>
 
