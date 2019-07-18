@@ -16,7 +16,7 @@
   		var mapOptions = {
     		zoom: 18,		
 			mapTypeId: google.maps.MapTypeId.ROADMAP,	
-    		center: new google.maps.LatLng(37.395810, 126.964374),
+    		center: new google.maps.LatLng(-12.046014, -77.030503),
 			panControl: true,
   			zoomControl: true,
   			mapTypeControl: true,
@@ -53,7 +53,6 @@
 		
 		//ADD NEW MARKER WITH LABEL
 		//=======================================================================================
-		/*
 		var marker1 = new MarkerWithLabel({
        		position: new google.maps.LatLng(-12.046014, -77.030503),
        		draggable: false,
@@ -132,7 +131,7 @@
      		});			
     	//marker.setMap( map );
 		
-		*/
+		
 		//INFO WINDOWS
 		//=======================================================================================
 		var contentString = '<div>'+
@@ -157,6 +156,11 @@
 		//=======================================================================================
   		infowindow.open(map,marker1);
 		
+		//ON CLICK MARKER, OPEN INFO WINDOWS
+		//=======================================================================================
+		google.maps.event.addListener(marker1, 'click', function() {
+  			infowindow.open(map,marker1);
+  		});
 
 		//ON MARKER CLICK EVENTS
 		//=======================================================================================
@@ -164,15 +168,15 @@
    	 		map.setZoom(17);
     		map.setCenter(marker.getPosition());
 			infowindow.open(map,marker);
-  		});*/
-		
-		google.maps.event.addListener(marker1, 'click', function() {
-			infowindow.open(map,marker1);
-   	 		//map.setZoom(17);
-    		//map.setCenter(marker.getPosition());			
   		});
 		
-		/*google.maps.event.addListener(marker2, 'click', function() {
+		google.maps.event.addListener(marker1, 'click', function() {
+   	 		map.setZoom(17);
+    		map.setCenter(marker.getPosition());
+			infowindow1.open(map,marker1);
+  		});
+		
+		google.maps.event.addListener(marker2, 'click', function() {
    	 		map.setZoom(17);
     		map.setCenter(marker.getPosition());
 			infowindow1.open(map,marker2);

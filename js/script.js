@@ -336,11 +336,11 @@ $(document).ready(function() {
 	// 07. COUNTDOWN
 	//===================================================================================
 	var theday = new Date();
-	theday = new Date(2019, 8, 22);
-	$('#countdown').countdown({until: theday, format: 'DHMS'});
+	theday = new Date(2015, 7, 12);
+	$('#countdown').countdown({until: theday, format: 'WDHMS'});
 	$('#countdown').countdown($.countdown.regionalOptions['custom-label']); 
 		 
-	$('#date-countdown').countdown({until: theday, format: 'DHMS'});
+	$('#date-countdown').countdown({until: theday, format: 'WDHMS'});
 		 
 	// 08. MOBILE MENU
 	//==================================================================================

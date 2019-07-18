@@ -1374,7 +1374,7 @@ img.with-border{
 	background-position:center center;
 	background-repeat:no-repeat;
 	color:#FFF;
-	-webkit-backface-visibility: hidden;	
+	-webkit-backface-visibility: hidden;
 }
 
 .image-divider.mobile{
