@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width"/>
+<title>KakaoLink v2 Demo(Default / Location) - Kakao JavaScript SDK</title>
+<script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
+
+</head>
+<body>
+<a id="kakao-link-btn" href="javascript:;">
+<img src="//developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png"/>
+</a>
+		<script type='text/javascript'>
+			  //<![CDATA[
+				// // 사용할 앱의 JavaScript 키를 설정해 주세요.
+				Kakao.init('30a0482f18f7499ee28ee7207a18a0b5');
+				// // 카카오링크 버튼을 생성합니다. 처음 한번만 호출하면 됩니다.
+				Kakao.Link.createDefaultButton({
+				  container: '#kakao-link-btn',
+				  objectType: 'location',
+				  address: '경기 안양시 동안구 시민대로 311 금강스마트빌딩 5층',
+				  addressTitle: '아르떼 채플&컨벤션',
+				  content: {
+					title: '공대성 ♡ 김연희 결혼식에 초대합니다.',
+					description: '장소 : 아르떼 채플&컨벤션 5층\n일시 : 2019년 9월 21일 (토) 오후 4시',
+					imageUrl: 'https://sung029.github.io/dsyh/images/test.png',
+					link: {
+					  mobileWebUrl: 'https://sung029.github.io/dsyh/',
+					  webUrl: 'https://sung029.github.io/dsyh/'
+					}
+				  },
+				  buttons: [
+					{
+					  title: '초대장 보기',
+					  link: {
+						mobileWebUrl: 'https://sung029.github.io/dsyh/',
+						webUrl: 'https://sung029.github.io/dsyh/'
+					  }
+					}
+				  ]
+				});
+			  //]]>
+		</script>
+
+</body>
+</html>
